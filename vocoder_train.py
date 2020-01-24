@@ -5,6 +5,7 @@ import argparse
 
 
 # python vocoder_train.py gta_model dummy --voc_dir ../../datasets/tts_training/training_wavernn -m gta_model
+# gta_model is run_id for saving model state, -m is the saved model path
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(
         description="Trains the vocoder from the synthesizer audios and the GTA synthesized mels, "

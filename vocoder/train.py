@@ -11,6 +11,7 @@ import vocoder.hparams as hp
 import numpy as np
 import time
 
+#CUDA_VISIBLE_DEVICES=3 python vocoder_train.py gta_model dummy --voc_dir ../datasets/tts_training/training_wavernn/ -m gta_model
 
 def train(run_id: str, syn_dir: Path, voc_dir: Path, models_dir: Path, ground_truth: bool,
           save_every: int, backup_every: int, force_restart: bool):
@@ -69,7 +70,7 @@ def train(run_id: str, syn_dir: Path, voc_dir: Path, models_dir: Path, ground_tr
                   ('LR', hp.voc_lr),
                   ('Sequence Len', hp.voc_seq_len)])
     
-    for epoch in range(1, 350):
+    for epoch in range(1, 1000):
         data_loader = DataLoader(dataset,
                                  collate_fn=collate_vocoder,
                                  batch_size=hp.voc_batch_size,

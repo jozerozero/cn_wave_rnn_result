@@ -24,7 +24,8 @@ if __name__ == '__main__':
         formatter_class=argparse.ArgumentDefaultsHelpFormatter
     )
     parser.add_argument("-v", "--voc_model_fpath", type=Path,
-                        default="vocoder/saved_models/pretrained/pretrained.pt",
+                        #default="vocoder/saved_models/pretrained/pretrained.pt",
+                        default="gta_model/gta_model/gta_model.pt",
                         help="Path to a saved vocoder")
     parser.add_argument("-i", "--input", type=str, required=True, help="input data(pickle) dir")
     parser.add_argument("-o", "--output", type=str, default='spkids', help="output data dir")

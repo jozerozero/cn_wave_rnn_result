@@ -1,0 +1,3 @@
+% use tacotron to first produce the training mels
+% use vocoder_train.py to train
+% use vocofer_inference.py to infer
